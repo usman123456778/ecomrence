@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Electronics Store</title>
+    <link rel="stylesheet" href="style.css"> <!-- Main stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header ( وہی ہیڈر جو index.html میں ہے) -->
+    <header>
+        <nav class="container nav__container">
+            <a href="index.html" class="logo">SimpleStyle</a>
+             <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav__menu">
+                 <li><a href="index.html#products">Shop</a></li>
+                 <li><a href="index.html#categories">Categories</a></li>
+                 <li><a href="about.html" class="active">About</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li class="nav__icons_mobile">
+                    <div class="language-selector">
+                        <select name="language" id="language_about" aria-label="Select Language">
+                            <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option>
+                        </select>
+                    </div>
+                    <a href="#" aria-label="User Account"><i class="fas fa-user"></i></a>
+                    <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-bag"></i><span class="cart-count">0</span>
+                    </a>
+                 </li>
+            </ul>
+            <div class="nav__icons_desktop">
+                <div class="language-selector">
+                    <select name="language_desktop_about" id="language_desktop_about" aria-label="Select Language">
+                        <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option>
+                    </select>
+                </div>
+                <a href="#" aria-label="User Account"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i><span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="menu-toggle open-menu-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+            <button class="menu-toggle close-menu-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section (General hero from style.css) -->
+        <header class="hero-section animated-section-content">
+            <div class="hero-content">
+                <!-- <span class="tag">About Us</span> Optional tag -->
+                <h1>Our Story</h1>
+                <p>Learn more about SimpleStyle and our commitment to quality and minimalist design.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="c22c23_e140bfa8cd6f4cb2ac5ee6e204f64073~mv2.avif" alt="Team or Store Image">
+            </div>
+        </header>
+
+        <section class="container animated-section-content" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <h2>Who We Are</h2>
+            <p style="margin-bottom: 1.5rem;">SimpleStyle was founded with a simple idea: to provide high-quality, minimalist fashion that is both timeless and accessible. We believe that true style lies in simplicity and attention to detail. Our collections are carefully curated to reflect these values, offering pieces that are versatile, durable, and effortlessly chic.</p>
+            <p>Our team is passionate about design and sustainability. We strive to source materials responsibly and work with ethical manufacturers to ensure that our products not only look good but also feel good to wear and own. We are more than just a brand; we are a community of individuals who appreciate the beauty in simplicity.</p>
+        </section>
+
+        <section class="features-section animated-section-content"> <!-- Re-using features section for values or team -->
+            <h2 class="section-title-center" style="width:100%;">Our Values</h2>
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_77c2b89535374768bec1d6337dcdbddc~mv2.avif" alt="Quality Icon" class="feature-icon">
+                <h4>Quality Craftsmanship</h4>
+                <p>We are committed to the highest standards of quality in every piece we create.</p>
+            </div>
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_c25f748ee2264db6a3767d99717a2b84~mv2.avif" alt="Sustainability Icon" class="feature-icon">
+                <h4>Sustainable Practices</h4>
+                <p>We believe in protecting our planet and use eco-friendly materials and processes.</p>
+            </div>
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_3ab3d3acd73843deba1dece7b2254e2f~mv2.avif" alt="Customer Focus Icon" class="feature-icon">
+                <h4>Customer Focus</h4>
+                <p>Our customers are at the heart of everything we do. Your satisfaction is our priority.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shopping Cart (same as index.html) -->
+    <aside class="cart-sidebar">
+        <div class="cart-header"><h2>Your Cart</h2><button class="close-cart-btn" aria-label="Close Cart"><i class="fas fa-times"></i></button></div>
+        <div class="cart-items"><p class="cart-empty-message">Your cart is currently empty.</p></div>
+        <div class="cart-footer"><div class="cart-total"><p>Total:</p><p id="cart-total-price-about">$0.00</p></div><button class="btn btn-primary checkout-btn" disabled>Checkout</button></div>
+    </aside>
+    <div class="cart-overlay"></div>
+
+    <!-- Footer ( وہی فوٹر جو index.html میں ہے) -->
+    <footer class="site-footer">
+        <div class="footer-main container">
+            <div class="footer-column animated-section-item"><h4>Store Location</h4><p>500 Terry Francine Street<br>San Francisco, CA 94158</p><p><a href="mailto:info@mysite.com">info@mysite.com</a></p><p><a href="tel:123-456-7890">123-456-7890</a></p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column animated-section-item"><h4>Shop</h4><ul><li><a href="index.html#products">Shop All</a></li><li><a href="index.html#categories">Categories</a></li></ul></div>
+            <div class="footer-column animated-section-item"><h4>Customer Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="about.html">About Us</a></li></ul></div>
+            <div class="footer-column animated-section-item"><h4>Policy</h4><ul><li><a href="#">Shipping & Returns</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">FAQ</a></li></ul></div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom animated-section-content"><div class="payment-methods"><p>We accept the following paying methods</p><div class="payment-icons"><img src="Visa.avif" alt="Visa"><img src="brand-mastercard@3x.avif" alt="Mastercard"><img src="PayPal.avif" alt="PayPal"></div></div><p class="copyright-text">© <span id="currentYearAbout"></span> by TechShed. Powered by <a href="#">Us</a></p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

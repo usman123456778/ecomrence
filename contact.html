@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ہم سے رابطہ کریں - اینیمیٹڈ</title>
+    <link rel="stylesheet" href="style.css"> <!-- Main stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (وہی ہیڈر جو index.html میں ہے) -->
+    <header>
+        <nav class="container nav__container">
+            <a href="index.html" class="logo">SimpleStyle</a>
+             <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav__menu">
+                 <li><a href="index.html#products">Shop</a></li>
+                 <li><a href="index.html#categories">Categories</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="contact.html" class="active">Contact</a></li>
+                 <li class="nav__icons_mobile">
+                    <div class="language-selector">
+                        <select name="language" id="language_contact" aria-label="Select Language">
+                            <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option>
+                        </select>
+                    </div>
+                    <a href="#" aria-label="User Account"><i class="fas fa-user"></i></a>
+                    <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-bag"></i><span class="cart-count">0</span>
+                    </a>
+                 </li>
+            </ul>
+            <div class="nav__icons_desktop">
+                <div class="language-selector">
+                    <select name="language_desktop_contact" id="language_desktop_contact" aria-label="Select Language">
+                        <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option>
+                    </select>
+                </div>
+                <a href="#" aria-label="User Account"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i><span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="menu-toggle open-menu-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+            <button class="menu-toggle close-menu-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <div class="contact-page-container">
+        <div class="animated-background">
+            <div class="animated-shape shape1"></div>
+            <div class="animated-shape shape2"></div>
+            <div class="animated-shape shape3"></div>
+            <div class="animated-shape shape4"></div>
+            <div class="animated-shape shape5"></div>
+        </div>
+         <div class="animated-text-bg"> <!-- Moved inside contact-page-container -->
+            <div class="animated-text">آن لائن کمائی کریں • Online Earning • Freelancing • YouTube • Blogging</div>
+            <div class="animated-text">Skills Development • Web Design • Digital Marketing • Passive Income</div>
+            <div class="animated-text">Grow Your Business • Social Media Marketing • Affiliate Programs</div>
+            <div class="animated-text">Learn & Earn • Online Courses • Entrepreneurship • Success Stories</div>
+        </div>
+
+        <div class="contact-content-wrapper"> <!-- JS will add is-visible -->
+            <h1 class="contact-title">ہم سے رابطہ کریں</h1>
+            <p class="contact-intro">
+                آپ کے سوالات، تجاویز یا کسی بھی قسم کی معلومات کے لیے ہم سے رابطہ کرنے میں ہچکچاہٹ محسوس نہ کریں۔ ہم جلد از جلد جواب دینے کی کوشش کریں گے۔
+            </p>
+
+            <div class="contact-main-area">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">آپ کا نام*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">آپ کا ای میل*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">موضوع</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">آپ کا پیغام*</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit-contact">پیغام بھیجیں</button>
+                </form>
+
+                <aside class="contact-info">
+                    <h3>رابطہ کی معلومات</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 خیالی اسٹریٹ، شہر، ملک</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+123 456 7890</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                    <p><i class="fas fa-clock"></i> پیر - جمعہ: صبح 9:00 - شام 5:00</p>
+
+                    <h3 style="margin-top: 30px;">سوشل میڈیا</h3>
+                    <p>
+                        <a href="#" aria-label="Facebook" style="margin-right:10px; font-size: 1.5em;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" style="margin-right:10px; font-size: 1.5em;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" style="margin-right:10px; font-size: 1.5em;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.5em;"><i class="fab fa-linkedin-in"></i></a>
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart (same as index.html) -->
+    <aside class="cart-sidebar">
+        <div class="cart-header"><h2>Your Cart</h2><button class="close-cart-btn" aria-label="Close Cart"><i class="fas fa-times"></i></button></div>
+        <div class="cart-items"><p class="cart-empty-message">Your cart is currently empty.</p></div>
+        <div class="cart-footer"><div class="cart-total"><p>Total:</p><p id="cart-total-price-contact">$0.00</p></div><button class="btn btn-primary checkout-btn" disabled>Checkout</button></div>
+    </aside>
+    <div class="cart-overlay"></div>
+
+    <!-- Footer (وہی فوٹر جو index.html میں ہے) -->
+    <footer class="site-footer">
+        <div class="footer-main container">
+            <div class="footer-column animated-section-item"><h4>Store Location</h4><p>500 Terry Francine Street<br>San Francisco, CA 94158</p><p><a href="mailto:info@mysite.com">info@mysite.com</a></p><p><a href="tel:123-456-7890">123-456-7890</a></p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column animated-section-item"><h4>Shop</h4><ul><li><a href="index.html#products">Shop All</a></li><li><a href="index.html#categories">Categories</a></li></ul></div>
+            <div class="footer-column animated-section-item"><h4>Customer Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="about.html">About Us</a></li></ul></div>
+            <div class="footer-column animated-section-item"><h4>Policy</h4><ul><li><a href="#">Shipping & Returns</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">FAQ</a></li></ul></div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom animated-section-content"><div class="payment-methods"><p>We accept the following paying methods</p><div class="payment-icons"><img src="Visa.avif" alt="Visa"><img src="brand-mastercard@3x.avif" alt="Mastercard"><img src="PayPal.avif" alt="PayPal"></div></div><p class="copyright-text">© <span id="currentYearContact"></span> by TechShed. Powered by <a href="#">Us</a></p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

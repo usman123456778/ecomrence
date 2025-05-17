@@ -1,0 +1,955 @@
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light gray background for the whole page */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%; /* Using percentage for padding */
+    background-color: #e9ecef; /* Light background for hero */
+    min-height: 70vh;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 30px;
+    max-width: 500px;
+}
+
+.hero-content .tag {
+    display: inline-block;
+    background-color: #dc3545; /* Red */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    font-weight: 900;
+    color: #212529;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #495057;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6f42c1; /* Purple */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a3;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* To maintain aspect ratio */
+    border-radius: 8px;
+}
+
+/* Ads Section */
+.ads-section {
+    display: flex;
+    gap: 20px;
+    padding: 40px 5%;
+    background-color: #ffffff; /* White background for this section if needed, or keep page default */
+}
+
+.ad-card {
+    flex: 1;
+    border-radius: 8px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Content above image */
+    justify-content: space-between; /* Pushes image to bottom within its container */
+    min-height: 350px; /* Ensure cards have some height */
+}
+
+.ad-smartphones {
+    background-color: #c82333; /* Red */
+}
+
+.ad-headphones {
+    background-color: #563d7c; /* Purple */
+}
+
+.ad-content {
+    margin-bottom: 20px; /* Space between text content and image */
+}
+
+.ad-card .ad-subtitle {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.ad-card h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.ad-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+.ad-image {
+    align-self: center; /* Center image if it's smaller than card width */
+    margin-top: auto; /* Push image towards the bottom if content is short */
+}
+
+.ad-image img {
+    max-width: 80%; /* Adjust as needed, original images are part of bg */
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+
+/* Features Section */
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items to the top */
+    padding: 40px 5%;
+    background-color: #f8f9fa; /* Very light gray or white */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.feature-item {
+    flex-basis: 200px; /* Base width for each item */
+    text-align: center;
+    margin: 15px; /* Spacing around items */
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* In a real scenario, these would be actual icons (SVG or font icons) */
+    /* background-color: #6f42c1; Icon placeholder color (purple) */
+    /* border-radius: 50%; */
+    display: inline-block;
+}
+
+.feature-item p {
+    font-size: 0.95em;
+    color: #495057;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    .hero-image {
+        justify-content: center;
+        width: 100%;
+        max-width: 500px; /* Limit laptop image size on smaller screens */
+    }
+
+    .ads-section {
+        flex-direction: column;
+    }
+    .ad-card {
+        min-height: auto; /* Adjust height for stacked cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .ad-card h2 {
+        font-size: 1.8em;
+    }
+
+    .features-section {
+        padding: 30px 20px;
+    }
+
+    .feature-item {
+        flex-basis: calc(50% - 30px); /* Two items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-item {
+        flex-basis: 100%; /* One item per row */
+    }
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+    .hero-content .tag {
+        font-size: 0.8em;
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+}
+
+
+/* ... پچھلا CSS کوڈ ... */
+
+/* Category Section */
+.category-section {
+    padding: 50px 5%; /* 5% padding on sides */
+    background-color: #ffffff; /* White background for this section */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.2em; /* Smaller than main headings */
+    color: #555;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between items */
+    justify-content: center;
+}
+
+.category-item {
+    text-align: center;
+    /* For scroll animation */
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.category-item.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.category-image-wrapper {
+    width: 160px;  /* Increased size */
+    height: 160px; /* Increased size */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Light grey background for circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto; /* Center circle and add bottom margin */
+    overflow: hidden; /* Clip image if it's larger */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+.category-item:hover .category-image-wrapper {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+    max-width: 75%;  /* Adjust to fit well inside the circle */
+    max-height: 75%; /* Adjust to fit well inside the circle */
+    object-fit: contain; /* Maintain aspect ratio and fit */
+}
+
+.category-icon {
+    font-size: 60px; /* Adjust icon size */
+    color: white; /* Default icon color (will be overridden for specific items) */
+}
+
+/* Special styling for "Sale" category */
+.category-item-sale .category-image-wrapper {
+    background-color: #6200ea; /* Purple */
+}
+.category-item-sale .category-icon {
+    color: white;
+}
+
+/* Special styling for "Best Sellers" category */
+.category-item-bestsellers .category-image-wrapper {
+    background-color: #000000; /* Black */
+}
+.category-item-bestsellers .category-icon {
+    color: white;
+}
+
+.category-name {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive adjustments for category grid */
+@media (max-width: 768px) {
+    .category-image-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+    .category-icon {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .category-image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+     .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on very small screens */
+        gap: 15px;
+    }
+    .category-icon {
+        font-size: 40px;
+    }
+    .category-name {
+        font-size: 0.8em;
+    }
+}
+
+/* ... پچھلا CSS کوڈ ... */
+
+/* Special Offer Banner Section */
+.special-offer-banner-section {
+    display: flex;
+    background-color: #f0f5fa; /* Light blueish background */
+    min-height: 400px; /* Adjust as needed */
+    overflow: hidden; /* Important for image positioning */
+    position: relative; /* For absolute positioning of image if needed */
+}
+
+.special-offer-content {
+    flex: 0 0 40%; /* Content takes about 40% width */
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff; /* White background for text area */
+    /* For the diagonal effect, one way using clip-path (browser support varies) */
+    /* clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); */
+    z-index: 1; /* Ensure content is above image if it overlaps */
+    color: #333;
+}
+
+.special-offer-content .offer-tag {
+    background-color: #dc3545; /* Red tag */
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+.special-offer-content h2 {
+    font-size: 1.8em; /* Main headline */
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 5px;
+}
+
+.discount-price {
+    font-size: 3.5em; /* Large "30%" */
+    font-weight: 900;
+    color: #6200ea; /* Purple */
+    margin-bottom: 5px;
+    line-height: 1;
+}
+.discount-price span {
+    color: #6200ea;
+}
+.discount-price ~ .offer-subtitle { /* Subtitle after discount */
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+
+.offer-details {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.offer-btn {
+    background-color: #6200ea; /* Purple button */
+    color: white;
+    padding: 12px 30px;
+    align-self: flex-start; /* Button to the left */
+}
+.offer-btn:hover {
+    background-color: #4a00b3;
+}
+
+.special-offer-image-wrapper {
+    flex: 1; /* Image wrapper takes remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://via.placeholder.com/1000x500/B0E0E6/333?text=Sky+Background+for+Drone'); /* Placeholder for background */
+    background-size: cover;
+    background-position: center right; /* Position drone image towards right */
+}
+
+.drone-image {
+    max-width: 90%; /* Adjust drone size relative to its wrapper */
+    max-height: 350px; /* Limit drone height */
+    object-fit: contain; /* Ensure drone is not cropped awkwardly */
+    /* transform: translateX(5%);  Slightly shift drone to right if needed */
+}
+
+/* Brands Section */
+.brands-section {
+    padding: 50px 5%;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.section-title-center { /* For titles that are centered */
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items if they don't fill the row */
+    gap: 1px; /* Creates the thin line effect between items */
+    background-color: #e0e0e0; /* This color will be the thin lines */
+    border: 1px solid #e0e0e0; /* Outer border */
+}
+
+.brand-item {
+    flex: 1 1 18%; /* Allows 5 items per row, adjust as needed */
+    min-width: 150px; /* Minimum width for smaller screens */
+    background-color: #ffffff; /* White background for each brand item */
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Animation */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.brand-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.brand-item img {
+    max-width: 100%;
+    max-height: 40px; /* Adjust logo height */
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7); /* Make logos greyish as in image */
+    transition: filter 0.3s ease;
+}
+
+.brand-item:hover img {
+    filter: grayscale(0%) opacity(1);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: #6200ea; /* Purple background */
+    color: white;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.newsletter-content-wrapper {
+    max-width: 550px; /* Limit width of content */
+    margin: 0 auto;
+    /* Animation */
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.newsletter-content-wrapper.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.newsletter-content-wrapper h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.newsletter-content-wrapper p {
+    font-size: 1em;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: stretch; /* Make items same height */
+}
+
+.newsletter-form .form-group {
+    flex-grow: 1; /* Input field takes available space */
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1em;
+    height: 100%; /* Match button height */
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-subscribe {
+    background-color: #000000; /* Black button */
+    color: white;
+    padding: 0 25px; /* Padding adjusted for height alignment */
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    height: 100%; /* Match input height */
+    white-space: nowrap;
+}
+
+.btn-subscribe:hover {
+    background-color: #333333;
+}
+
+.newsletter-consent {
+    font-size: 0.85em;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-consent input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: white; /* Changes checkbox color when checked */
+}
+.newsletter-consent label {
+    cursor: pointer;
+}
+
+/* Sr-only for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .special-offer-banner-section {
+        flex-direction: column;
+    }
+    .special-offer-content {
+        flex: 0 0 auto; /* Reset flex basis */
+        width: 100%;
+        text-align: center;
+        /* clip-path: none; Remove diagonal if it causes issues on mobile */
+        padding: 30px;
+    }
+    .special-offer-content .offer-tag,
+    .special-offer-content .offer-btn {
+        align-self: center;
+    }
+    .special-offer-image-wrapper {
+        min-height: 300px; /* Ensure image area has height */
+    }
+    .drone-image {
+        max-width: 70%;
+        max-height: 250px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Adjust for smaller screens */
+    }
+    .brand-item {
+        flex-basis: 30%; /* Approx 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .discount-price {
+        font-size: 3em;
+    }
+    .special-offer-content h2 {
+        font-size: 1.5em;
+    }
+    .discount-price ~ .offer-subtitle {
+        font-size: 1.1em;
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Stack form elements */
+    }
+    .newsletter-form .form-group,
+    .newsletter-form .btn-subscribe {
+        width: 100%;
+    }
+    .btn-subscribe {
+        padding: 12px 25px; /* Adjust padding for stacked button */
+    }
+
+    .brand-item {
+        flex-basis: 45%; /* Approx 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-item {
+        flex-basis: 100%; /* 1 item per row for very small screens */
+    }
+}
+
+
+/* ... پچھلا CSS کوڈ ... */
+
+/* Need Help Section */
+.need-help-section {
+    display: flex;
+    background-color: #121212; /* Dark background for left side */
+    color: white;
+    min-height: 350px; /* Adjust as needed */
+}
+
+.need-help-content {
+    flex: 0 0 45%; /* Adjust width as needed */
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Animation */
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.need-help-content.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.need-help-content h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.need-help-content p {
+    font-size: 1em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #e0e0e0; /* Lighter text color on dark background */
+    max-width: 400px; /* Limit paragraph width */
+}
+
+.btn-help {
+    background-color: #ffffff; /* White button */
+    color: #121212; /* Dark text */
+    padding: 12px 25px;
+    border-radius: 25px; /* More rounded button */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    align-self: flex-start;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-help:hover {
+    background-color: #f0f0f0;
+}
+
+.need-help-image-placeholder {
+    flex: 1;
+    background-color: #e9ecef; /* Light grey for the right side, like in image */
+    /* If you want a subtle image on the right like a faint laptop: */
+    background-image: url(c22c23_de5cbbefa9104fc1a1604ea146ea523a~mv2.avif);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s; /* Delayed animation */
+}
+.need-help-image-placeholder.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Footer Section */
+.site-footer {
+    background-color: #ffffff; /* White background for footer */
+    color: #333;
+    padding: 50px 5% 20px; /* Padding top, sides, bottom */
+    font-size: 0.9em;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Space between columns */
+    margin-bottom: 30px;
+    /* Animation for columns */
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Flexible columns, base width 200px */
+    min-width: 180px; /* Minimum width before wrapping further */
+    /* Animation */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.footer-column.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-column h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.footer-column p,
+.footer-column ul {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 1.2em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85em;
+    color: #6c757d;
+    /* Animation */
+    opacity: 0;
+    transition: opacity 0.6s ease-out 0.3s; /* Delayed opacity */
+}
+.footer-bottom.is-visible {
+    opacity: 1;
+}
+
+.payment-methods {
+    margin-bottom: 20px;
+}
+
+.payment-methods p {
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.payment-icons img {
+    height: 20px; /* Adjust payment icon size */
+    margin: 0 5px;
+    opacity: 0.7;
+  
+}
+
+.copyright-text a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.copyright-text a:hover {
+    text-decoration: none;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .need-help-section {
+        flex-direction: column;
+    }
+    .need-help-content {
+        flex: 0 0 auto;
+        text-align: center;
+    }
+    .need-help-content h2 {
+        font-size: 1.8em;
+    }
+    .need-help-content .btn-help {
+        align-self: center;
+    }
+    .need-help-image-placeholder {
+        min-height: 150px; /* Give some height even if empty */
+    }
+
+
+    .footer-main {
+        flex-direction: column;
+        gap: 20px; /* Smaller gap for stacked columns */
+    }
+    .footer-column {
+        flex-basis: 100%; /* Full width for stacked columns */
+        text-align: center; /* Center content in stacked columns */
+    }
+    .social-icons {
+        text-align: center;
+    }
+    .social-icons a {
+        margin: 0 10px;
+    }
+}

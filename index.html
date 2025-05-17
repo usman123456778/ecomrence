@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleStyle - Modern eCommerce</title>
+    <!-- Google Fonts (Poppins & Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== Header Section ==================== -->
+    <header>
+        <nav class="container nav__container">
+            <a href="index.html" class="logo">SimpleStyle</a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="nav__menu">
+                 <li><a href="#products">Shop</a></li>
+                 <li><a href="#categories">Categories</a></li>
+                 <li><a href="about.html">About</a></li> <!-- Assuming about.html is a separate page -->
+                 <li><a href="contact.html">Contact</a></li>
+                 <li class="nav__icons_mobile">
+                    <div class="language-selector">
+                        <select name="language" id="language" aria-label="Select Language">
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="fr">FR</option>
+                        </select>
+                    </div>
+                    <a href="#" aria-label="User Account"><i class="fas fa-user"></i></a>
+                    <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                 </li>
+            </ul>
+
+             <div class="nav__icons_desktop">
+                <div class="language-selector">
+                    <select name="language_desktop" id="language_desktop" aria-label="Select Language">
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="fr">FR</option>
+                    </select>
+                </div>
+                <a href="#" aria-label="User Account"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle open-menu-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+             <button class="menu-toggle close-menu-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section (Specific to index.html) -->
+        <section class="hero animated-section-content">
+            <div class="hero-content">
+                <h1>Simple is More</h1>
+                <p>Discover minimalist fashion that speaks volumes.</p>
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Categories Section (from style.css - for product filtering) -->
+        <section id="categories" class="categories container animated-section-content">
+            <h2>Categories</h2>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="personal-care">Personal Care</button>
+                <button class="category-btn" data-category="accessories">Accessories</button>
+                <button class="category-btn" data-category="coats">Coats</button>
+                <button class="category-btn" data-category="pants">Sweet Pants</button>
+                <button class="category-btn" data-category="perfume">Perfume</button>
+                <button class="category-btn" data-category="t-shirts">T-Shirts</button>
+                <button class="category-btn" data-category="sneakers">Sneakers</button>
+                <button class="category-btn" data-category="bags">Bags</button>
+            </div>
+        </section>
+
+        <!-- Products Section (from style.css) -->
+        <section id="products" class="products container">
+            <h2 class="animated-section-content">Our Products</h2>
+            <div class="product-grid">
+                <!-- Product cards will be dynamically filtered or added -->
+                <div class="product-card animated-section-item" data-category="t-shirts">
+                    <div class="product-image">
+                         <img src="photo/pexels-caio-3297455.jpg" alt="Minimalist T-Shirt">
+                    </div>
+                    <h3>Classic White Tee</h3>
+                    <p class="price" data-price="25.00">$25.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod1" data-name="Classic White Tee" data-price="25.00" data-image="photo/pexels-caio-3297455.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card animated-section-item" data-category="sneakers">
+                     <div class="product-image">
+                         <img src="photo/pexels-javon-swaby-197616-2783873.jpg" alt="White Sneakers">
+                     </div>
+                    <h3>Clean White Sneakers</h3>
+                    <p class="price" data-price="75.00">$75.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod2" data-name="Clean White Sneakers" data-price="75.00" data-image="photo/pexels-javon-swaby-197616-2783873.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card animated-section-item" data-category="accessories">
+                     <div class="product-image">
+                         <img src="photo/pexels-karolina-grabowska-4041392.jpg" alt="Simple Watch">
+                    </div>
+                    <h3>Minimalist Watch</h3>
+                    <p class="price" data-price="120.00">$120.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod3" data-name="Minimalist Watch" data-price="120.00" data-image="photo/pexels-karolina-grabowska-4041392.jpg">Add to Cart</button>
+                </div>
+                 <div class="product-card animated-section-item" data-category="bags">
+                     <div class="product-image">
+                        <img src="photo/pexels-karolina-grabowska-4239013.jpg" alt="Leather Tote Bag">
+                    </div>
+                    <h3>Leather Tote Bag</h3>
+                    <p class="price" data-price="95.00">$95.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod4" data-name="Leather Tote Bag" data-price="95.00" data-image="photo/pexels-karolina-grabowska-4239013.jpg">Add to Cart</button>
+                </div>
+                 <div class="product-card animated-section-item" data-category="coats">
+                     <div class="product-image">
+                        <img src="photo/pexels-olenkabohovyk-3693700 copy.jpg" alt="Beige Trench Coat">
+                    </div>
+                    <h3>Beige Trench Coat</h3>
+                    <p class="price" data-price="150.00">$150.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod5" data-name="Beige Trench Coat" data-price="150.00" data-image="photo/pexels-olenkabohovyk-3693700 copy.jpg">Add to Cart</button>
+                </div>
+                 <div class="product-card animated-section-item" data-category="perfume">
+                    <div class="product-image">
+                        <img src="photo/pexels-olenkabohovyk-3693700.jpg" alt="Subtle Perfume">
+                    </div>
+                    <h3>Eau De Minimaliste</h3>
+                    <p class="price" data-price="60.00">$60.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod6" data-name="Eau De Minimaliste" data-price="60.00" data-image="photo/pexels-olenkabohovyk-3693700.jpg">Add to Cart</button>
+                </div>
+                 <div class="product-card animated-section-item" data-category="pants">
+                    <div class="product-image">
+                        <img src="photo/pexels-shvetsa-5217901.jpg" alt="Comfy Sweatpants">
+                    </div>
+                    <h3>Comfy Sweatpants</h3>
+                    <p class="price" data-price="55.00">$55.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod7" data-name="Comfy Sweatpants" data-price="55.00" data-image="photo/pexels-shvetsa-5217901.jpg">Add to Cart</button>
+                </div>
+                 <div class="product-card animated-section-item" data-category="personal-care">
+                     <div class="product-image">
+                        <img src="photo/pexels-suzyhazelwood-2537930.jpg" alt="Organic Face Wash">
+                    </div>
+                    <h3>Organic Face Wash</h3>
+                    <p class="price" data-price="18.00">$18.00</p>
+                    <button class="btn add-to-cart-btn" data-id="prod8" data-name="Organic Face Wash" data-price="18.00" data-image="photo/pexels-suzyhazelwood-2537930.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Sections from about.html (Now part of index.html or a separate page structure) -->
+        <section class="ads-section animated-section-content">
+            <div class="ad-card ad-smartphones animated-section-item" style="background-image: url('c22c23_e140bfa8cd6f4cb2ac5ee6e204f64073~mv2.avif');">
+                <div class="ad-content">
+                    <p class="ad-subtitle">Holiday Deals</p>
+                    <h2>Up to 30% off</h2>
+                    <p>Selected Smartphone Brands</p>
+                    <button class="btn btn-secondary">Shop</button>
+                </div>
+            </div>
+            <div class="ad-card ad-headphones animated-section-item" style="background-image: url('c837a6_d84a631864a442a496670bc2d787c6a0~mv2.avif');">
+                <div class="ad-content">
+                    <p class="ad-subtitle">Just In</p>
+                    <h2>Take Your Sound Anywhere</h2>
+                    <p>Top Headphone Brands</p>
+                    <button class="btn btn-secondary">Shop</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section animated-section-content">
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_77c2b89535374768bec1d6337dcdbddc~mv2.avif" alt="Curb-side pickup icon" class="feature-icon">
+                <p>Curb-side pickup</p>
+            </div>
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_c25f748ee2264db6a3767d99717a2b84~mv2.avif" alt="Free shipping icon" class="feature-icon">
+                <p>Free shipping on orders over $50</p>
+            </div>
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_3ab3d3acd73843deba1dece7b2254e2f~mv2.avif" alt="Low prices icon" class="feature-icon">
+                <p>Low prices guaranteed</p>
+            </div>
+            <div class="feature-item animated-section-item">
+                <img src="c22c23_a055ae2dfe6f457b9c2f6f3fa6d95126~mv2.avif" alt="24/7 available icon" class="feature-icon">
+                <p>Available to you 24/7</p>
+            </div>
+        </section>
+
+        <section class="category-section animated-section-content"> <!-- Electronics Store Categories -->
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-item animated-section-item"> <a href="#" class="category-link"> <div class="category-image-wrapper"> <img src="c22c23_1fc89607a43a4df9b54dd3a1f9603f25~mv2.avif" alt="Computers" class="category-image"> </div> <p class="category-name">Computers</p> </a> </div>
+                <div class="category-item animated-section-item"> <a href="#" class="category-link"> <div class="category-image-wrapper"> <img src="c22c23_991175ea1f9140648365694757467456~mv2.avif" alt="Mobile" class="category-image"> </div> <p class="category-name">Mobile</p> </a> </div>
+                <div class="category-item animated-section-item category-item-sale"> <a href="#" class="category-link"> <div class="category-image-wrapper"> <i class="fas fa-tags category-icon"></i> </div> <p class="category-name">Sale</p> </a> </div>
+                <div class="category-item animated-section-item"> <a href="#" class="category-link"> <div class="category-image-wrapper"> <img src="c22c23_c4329067853e4f94a57afc2a226bd5cf~mv2.avif" alt="Tablets" class="category-image"> </div> <p class="category-name">Tablets</p> </a> </div>
+                <div class="category-item animated-section-item category-item-bestsellers"> <a href="#" class="category-link"> <div class="category-image-wrapper"> <i class="fas fa-medal category-icon"></i> </div> <p class="category-name">Best Sellers</p> </a> </div>
+            </div>
+        </section>
+
+        <section class="special-offer-banner-section">
+            <div class="special-offer-content animated-section-item">
+                <span class="tag offer-tag">Today's Special</span>
+                <h2>Best Arial View in Town</h2>
+                <div class="discount-price"> <span>30%</span> OFF </div>
+                <p class="offer-subtitle">on professional camera drones</p>
+                <p class="offer-details">Limited quantities.<br>See product detail pages for availability.</p>
+                <button class="btn btn-primary offer-btn">Shop</button>
+            </div>
+            <div class="special-offer-image-wrapper animated-section-item">
+                <img src="c837a6_ecf32c7284d4430582fcc90f60a1b4e6~mv2.avif" alt="Drone in flight" class="drone-image">
+            </div>
+        </section>
+
+        <section class="brands-section animated-section-content">
+            <h2 class="section-title-center">Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-item animated-section-item"> <img src="c22c23_75b7c7a737a0437f8998a42d8a345a85~mv2.avif" alt="Zodiac Brand"> </div>
+                <div class="brand-item animated-section-item"> <img src="c22c23_991175ea1f9140648365694757467456~mv2.avif" alt="Zoro Brand"> </div>
+                <div class="brand-item animated-section-item"> <img src="c22c23_5ccf45bbbdf842e7955635610510f7c3~mv2.avif" alt="GXL Brand"> </div>
+                <div class="brand-item animated-section-item"> <img src="c22c23_a055ae2dfe6f457b9c2f6f3fa6d95126~mv2.avif" alt="Horizon Brand"> </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section animated-section-content">
+            <div class="newsletter-content-wrapper">
+                <h3>Newsletter</h3>
+                <p>Sign up to receive updates on new arrivals and special offers.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <label for="emailInput" class="sr-only">Email</label>
+                        <input type="email" id="emailInput" name="email" placeholder="Email*" required>
+                    </div>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+                <div class="newsletter-consent">
+                    <input type="checkbox" id="consentCheckbox" name="consent" checked>
+                    <label for="consentCheckbox">Yes, subscribe me to your newsletter.*</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="need-help-section">
+            <div class="need-help-content animated-section-item"> <!-- JS will add is-visible -->
+                <h2>Need Help? Check Out<br>Our Help Center</h2>
+                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+                <a href="#" class="btn btn-help">Go to Help Center</a>
+            </div>
+            <div class="need-help-image-placeholder animated-section-item"> <!-- JS will add is-visible -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart-btn" aria-label="Close Cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <p class="cart-empty-message">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Total:</p>
+                <p id="cart-total-price">$0.00</p>
+            </div>
+            <button class="btn btn-primary checkout-btn" disabled>Checkout</button>
+        </div>
+    </aside>
+    <div class="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer"> <!-- General Footer for all pages -->
+        <div class="footer-main container">
+            <div class="footer-column animated-section-item"> <!-- JS will add is-visible -->
+                <h4>Store Location</h4>
+                <p>500 Terry Francine Street<br>San Francisco, CA 94158</p>
+                <p><a href="mailto:info@mysite.com">info@mysite.com</a></p>
+                <p><a href="tel:123-456-7890">123-456-7890</a></p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column animated-section-item"> <!-- JS will add is-visible -->
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Shop All</a></li>
+                    <li><a href="#">Computers</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-column animated-section-item"> <!-- JS will add is-visible -->
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column animated-section-item"> <!-- JS will add is-visible -->
+                <h4>Policy</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom animated-section-content"> <!-- JS will add is-visible -->
+            <div class="payment-methods">
+                <p>We accept the following paying methods</p>
+                <div class="payment-icons">
+                    <img src="Visa.avif" alt="Visa">
+                    <img src="brand-mastercard@3x.avif" alt="Mastercard">
+                    <img src="brand-amex@3x.avif" alt="American Express">
+                    <img src="PayPal.avif" alt="PayPal">
+                </div>
+            </div>
+            <p class="copyright-text">© <span id="currentYear"></span> by TechShed. Powered and secured by <a href="#">Wix</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
